@@ -15,17 +15,20 @@
     h3 Ma si dice che su internet è tutto anonimo!?
     p.text Nel senso che il tuo nome non è associato a questi dossier, ma che importa quando tutte le tue attività sono associate al numero telefonico? Attorno a quello si associano azioni che sembrano insignificati, ma sono cariche di metadati, e questo porta alla profilazione comportamentale.
 
-    h2 Visualizzazione sperimentale
-    p.text In rosso vediamo la quantità di traccianti trovati, in giallo, i servizi esterni (terze parti) al quale non si è ancora attribuito un significato
-    .col-md-12
-        img(src="/campaign/preview.png")
+    h1 Ricevi dei cookies prima di accettarli?
+    #cookiesrank
+    p.text Avere dei cookie prima di aver accettato il consenso è possibile per un motivo: solo i cookie di profilazione devono essere dichiarati. Ma possiamo capire quali cookie sono di profilazione e quali invece sono presenti per 
+        i motivi tecnici
+        |? Clicka sulla colonna per vedere i dettagli dei singoli siti. Va detto che i cookie sono una tecnologia di 20 anni fa, un’era geologica ai tempi di internet. Le tecniche di tracciamento sono cresciute: controlla con 
+        a(href="http://webkay.robinlinus.com/" targer="_blank") WebKay 
+        | l'impronta digitale del tuo dispositivo. 
 
-    br
-    h2 La (ridotta) delle compagnie trovate
+    h1 Quali sono le compagnie più presenti nella navigazione?
+    p.text I numeri sono espressi in percentuale, prendnedo in considerazione la pagina iniziale dei 25 siti verificati, prima di accettare i cookies
+    #companyrank
+
+    h1 I traccianti vengono veicolati dai siti, ecco da chi e quanti
     #simplerender
-
-    h2 Grafica sperimentale
-    #sankeytable
 
 .container
 
@@ -51,7 +54,7 @@
                     i youronlinechoices
                     |  li ha raccolti tutti con una spiegazione in italiano. 
             span.col-md-5.lighter
-                p Naviga con protezioni (AdBlocker)
+                p Naviga protetto (AdBlocker)
                 span.reduced 
                     a(href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm") Chrome
                 span.reduced
