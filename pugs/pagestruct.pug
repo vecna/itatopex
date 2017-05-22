@@ -2,7 +2,7 @@ doctype html
 html
     head
         meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
-        meta(name="viewport" content="width=device-width,initial-scale=1")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
 
         title Italian Tracking Exposed
 
@@ -29,19 +29,19 @@ html
 
         meta(property='og:url', content='https://italian.tracking.exposed')
         meta(property='og:type', content='website')
-        meta(property='og:description', content='Il tracciamento della navigazione non è di persè illegale, ma se ne conoscono i responsabili? e tu sai perché è un problema anche se pensi di non aver nulla da nascondere? Questo progetto è un’analisi tecnologica di un fenomeno difficile da osservare, e ci fa capire il mercato che c’è dietro alla gratuità di Internet.')
+        meta(property='og:description', content='Il tracciamento della navigazione non è illegale, ma se ne conoscono le conseguenze? e chi lo fa? chi li aiuta? Qui trovi un’analisi e delle spiegazioni di questo fenomeno.')
 
-    body(onload='initializeLanding(null, "itatopex", "Italian Tracking Exposed: ");')
+    body(onload='initializeLanding("itatopex", "Italian Tracking Exposed: "); loadPage();')
 
-        nav.navbar.navbar-default.navbar-fixed-top
+        nav.navbar.navbar-default.navbar-fixed-top.hidden-xs  
             .container
                 ul.nav.navbar-nav
                     li(class="landing")
-                        a(onclick='loadPage("landing");' class='links') La situazione
+                        a(onclick='loadPage("/landing");' class='links') La situazione
                     li(class="what-to-do")
-                        a(onclick='loadPage("what-to-do");' class='links') Approfonsci
+                        a(onclick='loadPage("/what-to-do");' class='links') Approfondisci
                     li(class="about")
-                        a(onclick='loadPage("about");' class='links') Contatti
+                        a(onclick='loadPage("/about");' class='links') Contatti
                     li.dropdown
                         a.dropdown-toggle(data-toggle='dropdown', href='#') Altre iniziative
                             span.caret
