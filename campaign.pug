@@ -1,0 +1,74 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/css/index.css')
+    link(rel='stylesheet', href='/js/vendor/bootstrap/css/bootstrap.css')
+    link(rel='stylesheet', href='/js/local/scorecard.css')
+
+    script(type='text/javascript', src='/js/vendor/jquery/jquery.js')
+    script(type='text/javascript', src='/js/vendor/collapse.js')
+    script(type='text/javascript', src='/js/vendor/lodash.min.js')
+    script(type='text/javascript', src='/js/vendor/moment.min.js')
+    script(type='text/javascript', src='/js/vendor/d3.min.js')
+    script(type='text/javascript', src='/js/vendor/d3-path.min.js')
+    script(type='text/javascript', src='/js/vendor/c3.min.js')
+
+    script(type='text/javascript', src='/js/local/scorecard.js')
+
+    meta(property="og:title" content="traccianti nei principali siti italiani")
+    meta(property="og:type" content="website")
+    meta(property="og:description" content="We tested " + testedSite + " websites, " + trackers + " trackers has been identify and " + notattributed + " still lack of attribution")
+    meta(property="og:url" content=ogurl)
+    meta(property="og:image" content=ogimageurl)
+
+    meta(property="og:image:width" content="600")
+    meta(property="og:image:height" content="300")
+
+    title Analisi dei traccianti nei principali siti web italiani
+
+  body
+
+    .container-fluid.headline Navigazione tracciata, un'analisi del fenomeno sui principali siti italiani
+    .container-fluid.subtitle Quando si accede ad un sito, tu vedi del contenuto, ma il sito vede te. Ogni volta che accedi ad un sito, questo avviene con più o meno compagnie a collezionare questa tua attività. E' responsabilià dei siti l'avere più o meno traccianti installati"
+
+    .container-fluid.statstable
+        table
+            thead
+                tr 
+                    th.col-sm-1 siti
+                    th.col-sm-1 Compagnie traccianti
+                    th.col-sm-1 traccianti non riconosciuti
+                    th.col-sm-1 contenuti attivi (js) 
+                    th.col-sm-1 cookies 
+            tbody
+                tr 
+                    th.col-sm-1 #{testedSites}
+                    th.col-sm-1 #{trackers}
+                    th.col-sm-1 #{notattributed}
+                    th.col-sm-1 #{javascripts}
+                    th.col-sm-1 #{cookies}
+
+    .container-fluid.buttons
+        button.col-4-md
+            a(href="#" onclick="renderScoreCards('#card');") La classifica
+        button.col-4-md
+            a(href="#" onclick="renderJsDetails('#lonelycontainer');") dettagli dei Javascript 
+        button.col-4-md
+            a(href="#" onclick="renderExpertV('#lonelycontainer');") pannello d'analisi
+        button.col-4-md
+            a(onclick="explanation()" href="listURL" target=_blank) Contribuisci all'analisi
+
+        div(id="lonelycontainer")
+        div(id="card0")
+        div(id="card1")
+        div(id="card2")
+        div(id="card3")
+        div(id="card4")
+        div(id="card5")
+        div(id="card6")
+        div(id="card7")
+        div(id="card8")
+
+    script.
+        initialize( '#card', '#{jsonsrc}' );
+
